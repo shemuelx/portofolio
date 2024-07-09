@@ -1,2 +1,5 @@
-# shemuelxPortofolioProject
-Personal Portfolio.
+# Portfolio
+
+Vanilla HTML/CSS/Javascript personal portfolio.
+
+---
