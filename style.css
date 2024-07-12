@@ -55,11 +55,6 @@ a:link {
   text-decoration: none;
 }
 
-/* a:hover {
-  color: var(--accent-color);
-  transition: color .4s
-} */
-
 h1,
 h2,
 h3,
@@ -157,8 +152,9 @@ h2 {
     & .slider {
       display: flex;
       flex-direction: row;
+      margin-top: 26px;
 
-      column-gap: 10px;
+      column-gap: 18px;
 
       overflow-x: auto;
       overflow-y: hidden;
