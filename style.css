@@ -1,5 +1,4 @@
 /* 
-  Description: Samuel Felipe Erazo Portfolio 
   Author: Samuel Felipe
   URL: https: //github.com/shemuelx/
 */
@@ -53,6 +52,11 @@ a,
 a:link {
   outline: none;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
 }
 
 h1,
@@ -149,35 +153,39 @@ h2 {
   }
 
   .projects {
-    & .slider {
-      display: flex;
-      flex-direction: row;
-      margin-top: 26px;
 
-      column-gap: 18px;
+    & .content {
+      margin-top: 1.6em;
 
-      overflow-x: auto;
-      overflow-y: hidden;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
+      & .slider {
+        display: flex;
+        flex-direction: row;
 
-      @media only screen and (max-width: 64em) {
-        scrollbar-width: thin;
-      }
+        column-gap: 18px;
 
-      @media screen and (min-width: 64.5em) {
-        scrollbar-width: thin;
-      }
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
 
-      & .slide {
-        flex-shrink: 0;
-        width: 200px;
-        height: 300px;
+        @media only screen and (max-width: 64em) {
+          scrollbar-width: thin;
+        }
 
-        & img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
+        @media screen and (min-width: 64.5em) {
+          scrollbar-width: thin;
+        }
+
+        & .slide {
+          flex-shrink: 0;
+          width: 200px;
+          height: 300px;
+
+          cursor: pointer;
+
+          & img {
+            object-fit: cover;
+          }
         }
       }
     }
@@ -186,22 +194,29 @@ h2 {
   .inclusion {
     margin-bottom: 6em;
 
-    & ul>li {
-      p {
-        text-wrap: balance;
-      }
+    & .blockquote {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
 
-      @media only screen and (max-width: 64em) {
-        p {
-          text-wrap: unset;
-        }
-      }
+      margin-top: 1.6em;
 
-      @media screen and (min-width: 64.5em) {
-        p {
-          text-wrap: unset;
-        }
+      footer {
+        display: flex;
+        gap: 0.5em;
       }
+    }
+
+    & li blockquote p::before {
+      content: '\201C';
+    }
+
+    & li blockquote p::after {
+      content: '\201D';
+    }
+
+    & li blockquote h4::before {
+      content: '\002D';
     }
   }
 }
