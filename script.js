@@ -4,20 +4,23 @@ const slider_content = [
     alt: "Test photo",
     id: "image",
     fetchpriority: "high",
-    href: "https://github.com/shemuelx/tribute-page",
+    url: "https://github.com/shemuelx/tribute-page",
+    href: "https://shemuelx.github.io/tribute-page/",
   },
   {
     src: "assets/treemap-data-visualization.png",
     alt: "Test photo",
     id: "image",
     fetchpriority: "high",
-    href: "https://github.com/shemuelx/treemap-diagram",
+    url: "https://github.com/shemuelx/treemap-diagram",
+    href: "https://freecodecamp-treemap-diagram.netlify.app/",
   },
   {
     src: "assets/exercise-tracker.png",
     alt: "Test photo",
     id: "image",
     fetchpriority: "high",
+    url: "https://github.com/shemuelx/exercise-tracker",
     href: "https://github.com/shemuelx/exercise-tracker",
   },
   {
@@ -25,20 +28,23 @@ const slider_content = [
     alt: "Test photo",
     id: "image",
     fetchpriority: "low",
-    href: "https://github.com/shemuelx/drum-machine",
+    url: "https://github.com/shemuelx/drum-machine",
+    href: "https://shemuelx.github.io/drum-machine/",
   },
   {
     src: "assets/fufu.png",
     alt: "Test photo",
     id: "image",
     fetchpriority: "low",
-    href: "https://github.com/shemuelx/fufu",
+    url: "https://github.com/shemuelx/fufu",
+    href: "https://shemuelx.github.io/fufu/",
   },
   {
     src: "assets/rpa-fipe-table.png",
     alt: "Test photo",
     id: "image",
     fetchpriority: "low",
+    url: "https://drive.google.com/file/d/1jNEcq4SN1TVz0J-7TNt9HKi1qx9hTPrj/view?usp=drive_link",
     href: "https://drive.google.com/file/d/1jNEcq4SN1TVz0J-7TNt9HKi1qx9hTPrj/view?usp=drive_link",
   },
 ];
@@ -120,6 +126,11 @@ const create_quote = function ({ author, quote, cite }) {
   return blockquote;
 };
 
+/**
+ *
+ * @function
+ * @returns {void}
+ */
 const load_images = function () {
   const [ul] = document.getElementsByClassName("slider");
   const fragment = document.createDocumentFragment();
@@ -130,7 +141,7 @@ const load_images = function () {
     const img = create_img(slide);
 
     li.onclick = function () {
-      window.location.href = slide.href;
+      window.open(slide.href, "_blank");
     };
     li.appendChild(img);
     fragment.append(li);
@@ -139,6 +150,11 @@ const load_images = function () {
   ul.appendChild(fragment);
 };
 
+/**
+ *
+ * @function
+ * @returns {void}
+ */
 const load_blockquotes = function () {
   const [ul] = document.getElementsByClassName("blockquote");
   const fragment = document.createDocumentFragment();
